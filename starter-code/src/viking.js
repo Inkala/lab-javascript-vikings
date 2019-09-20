@@ -64,10 +64,10 @@ War.prototype.addSaxon = function(saxon) {
 
 War.prototype.vikingAttack = function() {
     var randV = this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)];
-    var rand = Math.floor(Math.random() * this.saxonArmy.length);
-    var text = this.saxonArmy[rand].receiveDamage(randV.strength);
-    if (this.saxonArmy[rand].health <= 0) {
-        this.saxonArmy.splice(rand);
+    var randS = Math.floor(Math.random() * this.saxonArmy.length);
+    var text = this.saxonArmy[randS].receiveDamage(randV.strength);
+    if (this.saxonArmy[randS].health <= 0) {
+        this.saxonArmy.splice(randS);
     }
     return text;
 };
